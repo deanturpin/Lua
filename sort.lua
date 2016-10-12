@@ -8,11 +8,7 @@ sequence = {
 	1, 31, 3, 15, 12, 10, 18, 11, 13, 28, 10, 28, 21, 5, 27, 22, 12, 26, 24, 8
 }
 
--- For each value in the sequence print a bar to construct histogram
-for key, value in pairs(sequence) do
-
-	io.write(bar(value), "\n")
-end
+histogram(sequence)
 
 -- Insertion sort
 function insertionSort(s)
