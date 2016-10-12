@@ -14,12 +14,23 @@ function bar(n)
 	else return "-" .. bar(n - 1) end
 end
 
+calls = 0
+
 -- Print a sequence as a histogram
 function histogram(h)
 
+	calls = calls +1
+
+	-- Clear the screen
+	os.execute("clear")
+
 	-- For each value in the sequence print a bar to construct histogram
-	for key, value in pairs(sequence) do
+	for key, value in ipairs(h) do
 
 		io.write(bar(value), "\n")
 	end
+
+	print("Calls", calls)
+
+	sleep(0.05);
 end
