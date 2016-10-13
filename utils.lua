@@ -1,7 +1,5 @@
 -- Sleep
-function sleep(n)
-	os.execute("sleep " .. tonumber(n))
-end
+function sleep(n) os.execute("sleep " .. tonumber(n)) end
 
 -- Print a bar
 -- --------|
@@ -14,20 +12,23 @@ function bar(n)
 	else return "-" .. bar(n - 1) end
 end
 
-calls = 0
+local calls = 0
 
 -- Print a sequence as a histogram
 function histogram(h)
 
-	calls = calls +1
+	-- print("First element is ", h.unpack())
+
+	calls = calls + 1
 
 	-- Clear the screen
 	os.execute("clear")
 
 	-- For each value in the sequence print a bar to construct histogram
-	for key, value in ipairs(h) do
+	for k, v in ipairs(h) do
 
-		io.write(bar(value), "\n")
+		io.write(bar(v), "\n")
+		-- io.write(v, "\n");
 	end
 
 	print("Calls", calls)

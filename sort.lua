@@ -11,16 +11,26 @@ local sequence = {
 -- Insertion sort
 function sequence:sort()
 
-	for key, value in ipairs(self) do
-		
-		-- Clear value
-		-- self[1] = 0
+	for k, v in ipairs(self) do
+
+		-- Catch the last
+		if self[k + 1] ~= nil then
+
+			if self[k] > self[k + 1] then
+
+				-- Swap now and next
+					local temp = self[k]
+					self[k] = self[k + 1]
+					self[k + 1] = temp
+			end
+		end
 
 		-- Print sequence
 		histogram(self)
 	end
 end
 
+-- Sort the sequence
 sequence:sort()
 
 io.write("C'est fini")
