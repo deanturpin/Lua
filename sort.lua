@@ -2,11 +2,14 @@
 
 require "utils"
 
--- A random sequence
-local sequence = {
-	13, 6, 30, 17, 6, 28, 25, 22, 13, 24, 29, 9, 6, 21, 12, 16, 11, 16, 11, 12,
-	-- 1, 31, 3, 15, 12, 10, 18, 11, 13, 28, 10, 28, 21, 5, 27, 22, 12, 26, 24, 8
-}
+-- Initialise random number generator
+math.randomseed(os.time())
+
+-- Generate sequence of random numbers to sort
+sequence = {}
+for i=1,20 do
+	sequence[#sequence+1] = math.random(0,20)
+end
 
 -- Insertion sort
 function sequence:sort()
@@ -19,9 +22,9 @@ function sequence:sort()
 			if self[k] > self[k + 1] then
 
 				-- Swap now and next
-					local temp = self[k]
-					self[k] = self[k + 1]
-					self[k + 1] = temp
+				local temp = self[k]
+				self[k] = self[k + 1]
+				self[k + 1] = temp
 			end
 		end
 
