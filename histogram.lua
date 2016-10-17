@@ -31,5 +31,5 @@ function histogram(h)
 
 	print("Calls", calls)
 
-	sleep(0.05);
+	-- sleep(0.05);
 end
