@@ -17,8 +17,6 @@ local calls = 0
 -- Print a sequence as a histogram
 function histogram(h)
 
-	-- print("First element is ", h.unpack())
-
 	calls = calls + 1
 
 	-- Clear the screen
@@ -27,8 +25,8 @@ function histogram(h)
 	-- For each value in the sequence print a bar to construct histogram
 	for k, v in ipairs(h) do
 
-		io.write(bar(v), "\n")
-		-- io.write(v, "\n");
+		-- io.write(bar(v), "\n")
+		io.write(v, "\n");
 	end
 
 	print("Calls", calls)
