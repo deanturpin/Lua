@@ -1,17 +1,3 @@
--- Sleep
-function sleep(n) os.execute("sleep " .. tonumber(n)) end
-
--- Print a bar
--- --------|
-function bar(n)
-
-	-- Exit case: the cap atop the bar
-	if n == 1 then return "|"
-
-	-- Otherwise return the stem and recurse
-	else return "-" .. bar(n - 1) end
-end
-
 local calls = 0
 
 -- Print a sequence as a histogram
@@ -19,17 +5,23 @@ function histogram(h)
 
 	calls = calls + 1
 
-	-- Clear the screen
-	os.execute("clear")
+	-- Jump to top of screen
+	os.execute("tput cup 0 0")
 
-	-- For each value in the sequence print a bar to construct histogram
+	-- For each value in the sequence print a bar to construct the histogram
 	for k, v in ipairs(h) do
 
-		-- io.write(bar(v), "\n")
-		io.write(v, "\n");
+		-- Print the bar
+		for i=1,v do io.write("-") end
+
+		-- Print the cap
+		io.write("|")
+
+		-- Overwrite any old bars
+		for i=1,40 do io.write(" ") end
+
+		io.write("\n")
 	end
 
 	print("Calls", calls)
-
-	-- sleep(0.05);
 end
