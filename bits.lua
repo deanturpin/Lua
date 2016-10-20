@@ -44,4 +44,7 @@ for k,v in ipairs(randoms) do
 	print(v)
 end
 
+lines = os.execute("tput lines")
+print("Lines", lines)
+
 -- Logical operators

@@ -7,7 +7,7 @@ math.randomseed(os.time())
 
 -- Generate sequence of random numbers to sort
 sequence = {}
-	for i=1,48 do
+	for i=1,45 do
 	sequence[#sequence+1] = math.random(0,40)
 end
 
@@ -45,4 +45,4 @@ os.execute("clear")
 -- Sort the sequence
 sequence:sort()
 
-io.write("C'est fini")
+print("Ç'est fini")
