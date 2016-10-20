@@ -1,3 +1,5 @@
+Insertion sort written in Lua. Uses curses to animate the algorithm.
+
 ## Running
 ```bash
 ./sort.lua
