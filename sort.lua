@@ -7,7 +7,7 @@ math.randomseed(os.time())
 
 -- Generate sequence of random numbers to sort
 sequence = {}
-for i=1,46 do
+	for i=1,48 do
 	sequence[#sequence+1] = math.random(0,40)
 end
 
