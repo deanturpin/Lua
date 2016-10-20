@@ -1,8 +1,3 @@
-## Dependencies
-```bash
-sudo apt-get install lua5.3
-```
-
 ## Running
 ```bash
 ./sort.lua
@@ -56,4 +51,9 @@ sudo apt-get install lua5.3
 ---------------------------------------|                                        
 Calls   619
 C'est fini
+```
+
+## Dependencies
+```bash
+sudo apt-get install lua5.3
 ```
