@@ -12,10 +12,7 @@ function histogram(h)
 	for k, v in ipairs(h) do
 
 		-- Print the bar
-		for i=1,v do io.write("-") end
-
-		-- Print the cap
-		io.write("|")
+		for i=1,v+1 do io.write("#") end
 
 		-- Overwrite any old bars
 		for i=1,40 do io.write(" ") end
