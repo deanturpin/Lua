@@ -7,7 +7,7 @@ math.randomseed(os.time())
 
 -- Generate sequence of random numbers to sort
 sequence = {}
-for i=1,40 do
+for i=1,46 do
 	sequence[#sequence+1] = math.random(0,40)
 end
 
@@ -28,14 +28,14 @@ function sequence:sort()
 				self[k] = self[k + 1]
 				self[k + 1] = temp
 
+				-- Print sequence
+				histogram(self)
+
 				-- Sort the new sequence
 				sequence:sort()
 				break
 			end
 		end
-
-		-- Print sequence
-		histogram(self)
 	end
 end
 

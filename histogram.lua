@@ -5,7 +5,7 @@ function histogram(h)
 
 	calls = calls + 1
 
-	-- Jump to top of screen
+	-- Jump to top of screen and print timestamp
 	os.execute("tput cup 0 0")
 
 	-- For each value in the sequence print a bar to construct the histogram
