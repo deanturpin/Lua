@@ -20,5 +20,5 @@ function histogram(h)
 		io.write("\n")
 	end
 
-	print("Calls", calls)
+	print("\nCalls", calls)
 end
